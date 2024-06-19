@@ -1,0 +1,97 @@
+:root {
+  --progress-bar: 0;
+}
+
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #3579f5;
+  border-radius: 10px;
+}
+
+.progress-circle {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.progress-circle::after {
+  content: attr(data-progress);
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.progress-circle svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-circle circle.bg {
+  opacity: 0.1;
+}
+
+.progress-circle circle.progress {
+  stroke-width: 2px;
+  border-radius: 40px;
+  stroke-dasharray: 176;
+  stroke-dashoffset: calc(176 - (176 * var(--progress-bar)) / 100);
+}
+
+.content {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.content__check-list-wrapper {
+  width: max-content;
+  background-color: #2364db;
+  border-radius: 40px;
+  padding: 3px 10px;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.content p {
+  margin: 0;
+}
+
+.button-container {
+  margin-left: auto;
+}
+
+.button-container button {
+  padding: 10px 32px;
+  background-color: #f4f8ff;
+  color: #4777ed;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
