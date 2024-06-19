@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-circle" data-progress="0/7">
+        <svg
+          viewBox="0 0 60 60"
+          preserveAspectRatio="xMinYMin meet"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle class="bg" cx="30" cy="30" r="28"></circle>
+          <circle class="progress" cx="30" cy="30" r="28"></circle>
+        </svg>
+      </div>
+      <div class="content">
+        <div class="content__check-list-wrapper">
+          <span class="content__check-list">Чеклист</span>
+        </div>
+        <h2>Выполнено: 0 из 7 действий</h2>
+        <p>Следующее действие: Созвониться с клиентом до 23.05.24 12:00</p>
+      </div>
+      <div class="button-container">
+        <button>Открыть чеклист</button>
+      </div>
+    </div>
+  </body>
+</html>
